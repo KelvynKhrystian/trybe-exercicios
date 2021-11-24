@@ -1,4 +1,4 @@
-# BLOCO 1 - unix & BASH
+# BLOCO 1 - UNIX & BASH
 
 ## Nesse modulo aprendi sobre `quando terminar o módulo eu atualizo`. 
 
