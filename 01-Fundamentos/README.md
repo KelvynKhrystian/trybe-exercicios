@@ -2,11 +2,7 @@
 
 ## Nesse modulo aprendi sobre `quando terminar o módulo eu atualizo`. 
 
-
-
-
-
-para fins didáticos deixo a parte a baixo para me basear na modificação, comparando com esse arquivo pronto...
+### para fins didáticos deixo a parte a baixo para me basear na modificação, comparando com esse arquivo pronto...
 
 
 
