@@ -1,6 +1,6 @@
 # FUNDAMENTOS
 
-Nesse mdulo aprendi sobre `quando terminar o módulo eu atualizo`. 
+## Nesse modulo aprendi sobre `quando terminar o módulo eu atualizo`. 
 
 
 
