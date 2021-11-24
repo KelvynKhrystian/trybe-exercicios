@@ -8,7 +8,7 @@ _"A Trybe é uma escola do futuro para qualquer pessoa que queira melhorar de vi
 O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda introdução ao desenvolvimento de software, front-end, back-end, ciência da computação, engenharia de software, metodologias ágeis e habilidades comportamentais.
 
 # Trybe Projects
-This repository contains all projects developed by Débora Silveira while studying at Trybe rocket
+This repository contains all projects developed by _[Kelvyn Khrystian](https://www.linkedin.com/in/kelvynkhrystian/)_ while studying at Trybe rocket
 
 The web development training program from Trybe has a workload of 1500 hours that covers front-end, back-end, computer science, software engineering, agile methodologies, and soft skills.
 
