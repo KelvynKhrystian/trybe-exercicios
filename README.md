@@ -1,5 +1,5 @@
-# Trybe
-Exercícios da Trybe
+# Trybe ### Exercícios da Trybe
+
 
 Este repositório contém todas as atividades de aprendizagem desenvolvidas por _[Kelvyn Khrystian](https://www.linkedin.com/in/kelvynkhrystian/)_ enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
 
