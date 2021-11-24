@@ -1,4 +1,4 @@
-# FRONT-END
+# FUNDAMENTOS
 
 Nesse mdulo aprendi sobre `quando terminar o módulo eu atualizo`. 
 
