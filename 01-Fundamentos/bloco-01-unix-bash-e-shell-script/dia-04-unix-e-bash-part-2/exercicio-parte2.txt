@@ -1,0 +1,23 @@
+# Exercicio 1
+
+cd unix_tests
+
+# Exercicio 2
+
+ls -l
+
+# Exercicio 3
+
+chmod 666 bunch_of_things.txt
+ls -l bunch_of_things.txt
+
+# Exercicio 4
+
+chmod a-w bunch_of_things.txt
+ls -l bunch_of_things.txt
+
+# Exercicio 5
+
+chmod 644 bunch_of_things.txt
+ls -l bunch_of_things.txt
+

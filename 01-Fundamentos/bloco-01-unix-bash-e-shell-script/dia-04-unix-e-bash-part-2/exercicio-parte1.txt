@@ -1,0 +1,54 @@
+#!/bin/bash
+
+# Exercicio 1
+
+cd unix_tests
+
+# Exercicio 2
+
+"Internet\nUnix\nBash" > skills2.txt
+
+# Exercicio 3
+
+"Javascript\nShell Script\nC\nCSS\nJava" >> skills2.txt
+
+# Exercicio 4
+
+cat skills2.txt | wc -l
+
+# Exercicio 5
+
+cat skills2.txt | sort | head -3 > top_skills.txt
+
+# Exercicio 6
+
+cat > phrases2.txt
+Eu serei o rei dos piratas
+oloquinho meu
+sei la o que to fazendo 
+estudar que dinheiro não cai do ceu
+estudar pq o dificil recompensa
+
+# Exercicio 7
+
+grep -c br phrases2.txt
+
+# Exercicio 8
+
+grep -vc br phrases2.txt
+
+# Exercicio 9
+
+
+cat >> phrases2.txt
+Suiça
+Islandia
+
+# Exercicio 10
+
+cat phrases2.txt countries.txt > bunch_of_things.txt
+
+# Exercicio 11
+
+sort -o bunch_of_things.txt bunch_of_things.txt
+
