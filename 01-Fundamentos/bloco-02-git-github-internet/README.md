@@ -6,4 +6,4 @@ Se focou na história, instalação, configuração, sua importância e utiliza�
 
 ### Internet
 
-Como surgiu e como funciona até hoje e exercício de "o que acontece quando voçê da um enter em um site de busca no seu browser"
+Como surgiu e como funciona até hoje e exercício de "o que acontece quando você da um enter em um site de busca no seu browser" (exercício nesta pasta!).
