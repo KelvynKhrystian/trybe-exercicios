@@ -1,13 +1,3 @@
 body{
-    color: #666;
-    background-color: #242424;
-    font-family: 'Montserrat';
-}
-h1{
-    font-size: 2em;
-}
-ul{
-    color: aliceblue;
-    background-color: #888;
-    font-weight: bold;
+    background-color: aqua;
 }
