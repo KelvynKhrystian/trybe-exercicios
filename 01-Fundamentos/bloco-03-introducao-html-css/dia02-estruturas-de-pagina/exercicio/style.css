@@ -1,3 +1,16 @@
 body{
-    background-color: aqua;
+    color: #666;
+    background-color: #242424;
+    font-family: 'Montserrat';
+}
+h1{
+    font-size: 2em;
+}
+.listas{
+    color: aliceblue;
+    background-color: #888;
+    font-weight: bold;
+}
+body{
+    background-color: #242424;
 }
