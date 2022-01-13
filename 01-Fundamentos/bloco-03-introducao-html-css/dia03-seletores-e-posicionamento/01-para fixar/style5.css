@@ -1,0 +1,55 @@
+ol li{
+    background-color: yellow;
+}
+li{
+    font-size: 20px;
+}
+.par{
+    background-color: green;
+}
+.impar{
+    text-transform: uppercase;
+}
+h1, h2, h3{
+    color: red;
+}
+h1{
+    font-size: 40px;
+    
+}
+h1 em {
+    border: 1px black solid;
+}
+li em {
+    font-weight: bold;
+}
+.a3{
+    color: blue;
+}
+#js{
+    background-color: pink;
+}
+#laranja:hover{
+    font-weight: bold;
+    color: orange;
+}
+#verde:hover{
+    font-weight: bold;
+    color: rgb(102, 255, 0);
+}
+#preta:hover{
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+#amarela:hover{
+    font-weight: bold;
+    color: rgb(238, 223, 11);
+}
+#azul:hover{
+    font-weight: bold;
+    color: rgb(25, 0, 255);
+}
+a{
+    text-decoration: none;
+    color: #000000;
+}
