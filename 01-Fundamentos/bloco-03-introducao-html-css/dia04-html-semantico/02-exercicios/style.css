@@ -1,0 +1,34 @@
+body{
+    color: rgb(51, 154, 250);;
+    background-color: rgb(51, 154, 250);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+article{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+aside{
+    width: 30%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+}
+main{
+    display: inline-block;
+}
+h1{
+    margin-left: 10px;
+    color: rgb(255, 255, 255);
+    font-family: monospace;
+}
+a{
+    margin-right: 15px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: rgb(28, 5, 129);
+}
+footer{
+    color: rgb(255, 255, 255);
+}
