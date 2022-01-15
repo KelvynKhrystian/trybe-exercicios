@@ -1,0 +1,17 @@
+h1, p{
+  text-align: center;
+}
+ol{
+  text-align: center;
+  align-items: center;
+}
+li:hover{
+  background-color: brown;
+}
+li:active{
+  background-color: rgb(47, 12, 243);
+  font-family: monospace;
+}
+li{
+  list-style: none;
+}
