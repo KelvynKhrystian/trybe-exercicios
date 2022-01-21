@@ -16,4 +16,6 @@ leitor.livrosFavoritos[1] = {
     editora: 'Rocco',
   }
 
-console.log(leitor);
+console.log(leitor.nome + ' tem ' + leitor.livrosFavoritos.length + ' livros favoritos.');
+
+// "Julia tem 2 livros favoritos"
