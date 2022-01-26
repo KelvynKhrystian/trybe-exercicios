@@ -1,4 +1,2 @@
-
-console.log(document.getElementById('start').nextSibling) // nó
-
-console.log(document.getElementById('start').nextElementSibling) // <p>elemento</p>
+  // 1. Acesse o elemento elementoOndeVoceEsta.
+  const elementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
