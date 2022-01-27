@@ -29,7 +29,18 @@
 // <section id="terceiroFilho"></section>
 //       <section id="quartoEUltimoFilho"></section>
 
-   const remove = 0;
+    const pai = document.getElementById("pai")   
+    pai.removeChild()
+
+    for (let index = pai.childNodes.length - 1; index >= 0; index -= 1) {
+      const currentChildren = pai.childNodes[index];
+      if (currentChildren.id !== 'elementoOndeVoceEsta') {
+        currentChildren.remove();
+      }
+    }
+
+    const segundoEUltimoFilhoDoFilho = document.getElementById('segundoEUltimoFilhoDoFilho');
+    segundoEUltimoFilhoDoFilho.remove();
 
 
   </script>
