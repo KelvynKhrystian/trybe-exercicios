@@ -5,6 +5,7 @@ let pai = elementoOndeVoceEsta.parentElement;
 pai.style.color = 'blue';
 // Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
 let filho = elementoOndeVoceEsta.firstElementChild;
+filho.innerText =  "primeiro filho do filho"
 // Acesse o primeiroFilho a partir de pai .
 let filhpPrimeiro = pai.firstElementChild;
 // Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta .
