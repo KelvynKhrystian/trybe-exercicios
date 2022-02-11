@@ -93,12 +93,29 @@
 // ... como valores da lista. Essa lista deve ser filha do section criado no passo 6;
         let ul = document.createElement("ul");
         section3.appendChild(ul);
-        let li = document.createElement("li");
-        ul.appendChild(li);
-        
+        function criarLi(nomeDoInnerText){
+            let li = document.createElement("li")
+            li.innerText = nomeDoInnerText;
+            ul.appendChild(li);
+        }
+        criarLi("um");
+        criarLi("dois");
+        criarLi("três");
+        criarLi("quatro");
+        criarLi("cinco");
+        criarLi("seis");
+        criarLi("sete");
+        criarLi("oito");
+        criarLi("nove");
+        criarLi("dez");
 
 // Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2.
-
+        let h31 = document.createElement("h3");
+        main.appendChild(h31);
+        let h32 = document.createElement("h3");
+        main.appendChild(h32);
+        let h33 = document.createElement("h3");
+        main.appendChild(h33);
 
     </script>
   </body>
