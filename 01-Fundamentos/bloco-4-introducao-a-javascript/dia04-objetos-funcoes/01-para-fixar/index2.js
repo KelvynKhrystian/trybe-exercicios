@@ -15,5 +15,5 @@ let car = {
   };
 
   for (let i in car){
-    console.log(i, car[i]);
+    console.log(i + " : " + car[i]);
 }
