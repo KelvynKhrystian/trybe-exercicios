@@ -15,8 +15,8 @@
 // Array de teste: [2, 3, 6, 7, 10, 1]; .
 // Valor esperado no retorno da função: 4 .
 
-function maiorValor(array){
-  let maior = Math.max.apply(null, array);
-  console.log(maior);
-}
-maiorValor([20,3000,4])
+ function maiorValor(array){
+   let maior = Math.max.apply(null, array);
+   console.log(maior);
+ }
+ maiorValor([20,3000,4])
