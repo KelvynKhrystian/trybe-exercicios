@@ -10,12 +10,18 @@ const myWebpage = document.getElementById('my-spotrybefy');
 // 1.2. Note que uma das caixas está um pouco acima das outras. Por que isso ocorre?
 
 // 2. Crie uma função que adicione a classe 'tech' ao elemento `li` quando for clicado.
-function addCLass(){
-    let li = document.querySelector("li")
-    li.className = "tech";
+
+function addClass(event) {
+  const techElement = document.querySelector('.tech');
+  techElement.classList.remove('tech');
+  event.target.classList.add('tech');
+  input.value = '';
 }
 
-li.addEventListener("click", addCLass)
+firstLi.addEventListener('click', addClass);
+secondLi.addEventListener('click', addClass);
+thirdLi.addEventListener('click', addClass);
+
 
 // 2.1. Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
 
