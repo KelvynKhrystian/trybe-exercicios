@@ -99,7 +99,36 @@ function displayHolidays() {
   displayHolidays();
 
 
+//   Exercício 4:
 
+function criarSexta(string){
+    const sexta = document.createElement("button");
+    sexta.id = "btn-friday";
+    sexta.innerText = string
+    const sextaClasse = document.querySelector(".buttons-container");
+    sextaClasse.appendChild(sexta);
+}
+
+criarSexta("Sexta-feira");
+
+function modificarSexta() {
+    let getHolidayButton = document.querySelector('#btn-holiday');
+    let getHolidays = document.querySelectorAll('.holiday')
+    let backgroundColor = 'rgb(238,238,238)';
+    let setNewColor = 'white';
+  
+    getHolidayButton.addEventListener('click', function() {
+      for (let index = 0; index < getHolidays.length; index += 1) {
+        if (getHolidays[index].style.backgroundColor === setNewColor) {
+          getHolidays[index].style.backgroundColor = backgroundColor;
+        } else {
+          getHolidays[index].style.backgroundColor = setNewColor;
+        }
+      }
+    })
+  };
+  
+  displayHolidays();
 
 
 
