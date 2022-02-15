@@ -99,7 +99,17 @@ function displayHolidays() {
   displayHolidays();
 
 
+//   Exercício 4:
 
+function criarSexta(string){
+    const sexta = document.createElement("button");
+    sexta.id = "btn-friday";
+    sexta.innerText = string
+    const sextaClasse = document.querySelector(".buttons-container");
+    sextaClasse.appendChild(sexta);
+}
+
+criarSexta("Sexta-feira");
 
 
 
