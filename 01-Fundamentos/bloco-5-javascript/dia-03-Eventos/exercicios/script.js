@@ -19,9 +19,46 @@ function createDaysOfTheWeek() {
 
   function createDays (){
       const daysLocation = document.getElementById("days");
-      console.log(daysLocation);
+      for(i=0; i<dezDaysList.length;i++){
+        const dayItem = document.createElement("li");
+        dayItem.innerText = dezDaysList[i];
+        dayItem.classList.add("day");
+        daysLocation.appendChild(dayItem);
+      }
+  }
+  createDays()
+
+  function createClass(dia, classe){
+      dia.classList.add(classe);
   }
 
-  createDays()
+  let dia31 = document.querySelectorAll(".day")[32] ;
+  let dia25 = document.querySelectorAll(".day")[26] ;
+  let dia24 = document.querySelectorAll(".day")[25] ;
+  let dia04 = document.querySelectorAll(".day")[5] ;
+  let dia11 = document.querySelectorAll(".day")[12] ;
+  let dia18 = document.querySelectorAll(".day")[19] ;
+  createClass(dia24, "hollyday");
+  createClass(dia25, "hollyday");
+  createClass(dia31, "hollyday");
+  createClass(dia04, "hollyday");
+  createClass(dia11, "friday");
+  createClass(dia18, "friday");
+  createClass(dia25, "friday");
+
+  
+ 
+
+  function buttonFeriado (string){
+    let botaoContainer = document.querySelector("buttons-container");
+    let botao = document.createElement("button");
+    botao.innerText(string);
+    botao.id = "btn-holiday";
+    botaoContainer.appendChild(botao);
+  }
+
+  buttonFeriado("Feriados")
+
+
 
 
