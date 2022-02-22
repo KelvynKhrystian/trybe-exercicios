@@ -1,0 +1,22 @@
+body{
+    max-width: 80%;
+    width: 100%;
+    margin: 40px auto;
+    background-color: rgb(207, 207, 207);
+
+}   
+header form{
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 10px 5px 15px rgb(150, 150, 150);
+}
+.container{
+    margin: 20px 0px 20px 0px;
+}
+.form-select{
+    width: 20%;
+}
+button{
+    margin-bottom: 10px;
+}
