@@ -77,3 +77,33 @@
     }
     
   }
+
+  @media (min-width: 1300px) {
+    body {
+      background-color: tomato;
+      color: black;
+      font-size: larger;
+      margin: 15px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+
+    section {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    img {
+      width: 520px;
+      padding: 10px;
+    }
+
+
+
+  }
