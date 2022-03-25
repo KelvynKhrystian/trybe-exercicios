@@ -11,6 +11,8 @@
   }
   
   body {
+    font-size: large;
+    margin: 25px;
   
   }
   
@@ -19,7 +21,7 @@
   }
   
   h1 {
-  
+    font-size: medium;
   }
   
   h2 {
@@ -28,6 +30,7 @@
   
   img {
       max-width: 100%;
+      margin-bottom: 50px;
   }
   
   main {
@@ -46,3 +49,31 @@
     font-size: .8em;
   }
   /* //exercicio */
+
+  @media (max-width: 800px) {
+    body {
+      background-color: black;
+      color: white;
+      margin: 10px;
+    }
+    section {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    h1 {
+      font-size: larger;
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+    }
+    
+    img {
+      width: 320px;
+      padding: 10px;
+    }
+    
+  }
