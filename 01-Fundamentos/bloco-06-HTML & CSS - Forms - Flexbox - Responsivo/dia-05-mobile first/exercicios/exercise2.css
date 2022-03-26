@@ -6,7 +6,7 @@ html {
   box-sizing: inherit;
 }
 
-@media (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
 
   container {
     flex-direction: column;
@@ -45,3 +45,9 @@ html {
     
   
 };
+
+@media screen and (min-width: 601px) and (max-width: 1000px) {
+  body {
+    background-color: aqua;
+  }
+} */
