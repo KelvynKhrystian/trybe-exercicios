@@ -1,0 +1,26 @@
+body {
+    
+}
+
+header {
+    color: white;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    font-weight: bold;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    
+};
+
+ul {
+    list-style-type: none;
+}
+
+.ul-nav {
+    list-style-type: none;
+}
