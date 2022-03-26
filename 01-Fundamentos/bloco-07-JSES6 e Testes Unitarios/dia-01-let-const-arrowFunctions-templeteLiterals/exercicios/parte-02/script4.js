@@ -9,12 +9,19 @@ const longestWord = text => {
     let maxLength = 0;
     let result = '';
 
-    for (const word of wordArray) {
-        if (word.length > maxLength) {
-            maxLength = word.length;
-            result = word;
+    for (let i=0; i<wordArray.length; i+=1) {
+        if(wordArray[i].length > maxLength) {
+            maxLength = wordArray[i].length;
+            result = wordArray[i];
         }
     }
+
+    // for (const word of wordArray) {
+    //     if (word.length > maxLength) {
+    //         maxLength = word.length;
+    //         result = word;
+    //     }
+    // }
 
     return result;
 }
