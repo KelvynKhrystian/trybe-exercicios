@@ -1,5 +1,5 @@
 const factorial = number => number > 1 ? number * factorial(number - 1) : 1;
-console.log(factorial(2));
+console.log(factorial(4));
 
 // const factorial = number => {
 //     let result = 1;
