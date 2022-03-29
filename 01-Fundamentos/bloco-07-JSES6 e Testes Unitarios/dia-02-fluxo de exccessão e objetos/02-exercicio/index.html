@@ -15,18 +15,34 @@
   <button id='button'>Somar</button>
   <p id='result'></p>
   <script>
+
+    const verifyIsNumber = (value1, value2) => {
+      if (value1 === '' || value2 === '') {
+        document.getElementById('result').innerHTML = `Os valores devem ser numéricos`;
+        throw new Error('Os valores devem ser numéricos');
+      }
+    };
+
     function sum() {
-      const value1 = document.getElementById('value1').value;
-      const value2 = document.getElementById('value2').value;
-      const result = parseInt(value1) + parseInt(value2);
-      document.getElementById('result').innerHTML = `Resultado: ${result}`;
-      document.getElementById('value1').value = '';
-      document.getElementById('value2').value = '';
+      try {
+        const value1 = document.getElementById('value1').value;
+        const value2 = document.getElementById('value2').value;
+        const result = parseInt(value1) + parseInt(value2);
+        verifyIsNumber(value1,value2);
+        document.getElementById('result').innerHTML = `Resultado: ${result}`;
+        document.getElementById('value1').value = '';
+        document.getElementById('value2').value = '';
+      }
+      catch (error) {
+        throw error.message;
+      }
     }
+
     window.onload = () => {
       const button = document.getElementById('button');
       button.addEventListener('click', sum);
     }
+
   </script>
 </body>
 </html>
