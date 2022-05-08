@@ -50,16 +50,8 @@
   justify-content: center;
 }
 
-.card {
-  background-color: black;
-  color: #dcdfe6;
-  width: 200px;
-  border-radius: 5px;
-  padding: 50px;
-  margin: 25px;
 
-}
 
 .footer {
-  color: rgb(17, 20, 199);
+  color: rgb(0, 4, 255);
 }
