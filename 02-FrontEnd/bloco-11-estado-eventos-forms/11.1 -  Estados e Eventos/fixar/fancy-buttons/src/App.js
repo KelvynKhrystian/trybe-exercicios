@@ -23,18 +23,21 @@ class App extends React.Component {
     this.setState ((estadoAnterior, _props) => ({
       btn1Click : estadoAnterior.btn1Click + 1
     }))
+    console.log(`Botão 1 ${this.getButtonColor(this.state.btn1Click)}`);
   }
   
   btn2() {
     this.setState ((estadoAnterior, _props) => ({
       btn2Click : estadoAnterior.btn2Click + 1
     }))
+    console.log(`Botão 1 ${this.getButtonColor(this.state.btn2Click)}`);
   }
   
   btn3() {
     this.setState ((estadoAnterior, _props) => ({
       btn3Click : estadoAnterior.btn3Click + 1
     }))
+    console.log(`Botão 1 ${this.getButtonColor(this.state.btn3Click)}`);
   }
 
   pintarNome(numero) {
