@@ -36,12 +36,34 @@ class App extends React.Component {
       btn3Click : estadoAnterior.btn3Click + 1
     }))
   }
+
+  pintarNome(numero) {
+    // Essa função contém um ternário que realiza a lógica para mudarmos
+    // a cor do botão para verde quando for um número par
+    return numero % 2 === 0 ? 'green' : 'white';
+  }
+
   render() {
+    const { btn1Click, btn2Click, btn3Click } = this.state;
     return (
       <div>
-          <button onClick={this.btn1}>Botão "1" :  {this.state.btn1Click} </button>
-          <button onClick={this.btn2}>{this.state.btn2Click}</button>
-          <button onClick={this.btn3}>{this.state.btn3Click}</button>
+          <button
+            onClick={this.btn1}
+            style={{ backgroundColor: this.pintarNome(btn1Click) }}
+          >
+            Botão "1" | Contador: {this.state.btn1Click} 
+          </button>
+          <button
+            onClick={this.btn2}
+            style={{ backgroundColor: this.pintarNome(btn2Click) }}
+          >
+            Botão "2" | Contador: {this.state.btn2Click}</button>
+          <button
+            onClick={this.btn3}
+            style={{ backgroundColor: this.pintarNome(btn3Click) }}
+          >
+            Botão "3" | Contador: {this.state.btn3Click}
+          </button>
       </div>
     );
   }
