@@ -6,8 +6,16 @@ body{
 h1{
     font-size: 2em;
 }
+
+.listas{
+    color: aliceblue;
+    background-color: #888;
+    font-weight: bold;
+}
+
 ul{
     color: aliceblue;
     background-color: #888;
     font-weight: bold;
+
 }
