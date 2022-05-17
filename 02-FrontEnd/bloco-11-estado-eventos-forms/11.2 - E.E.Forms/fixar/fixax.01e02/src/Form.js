@@ -5,18 +5,23 @@ class Form extends React.Component {
   constructor(){
     super()
 
-    this.metodoFixar = this.metodoFixar.bind(this);
+    this.handleChange = this.handleChange.bind(this);
 
     this.state = {
       inputName: '',
-      textArea: ''
+      textArea: '',
+      options: '',
+      checkbox: '',
+      file:'',
     }
   }
 
-  metodoFixar(event) {
+  handleChange({ target }) {
+    const { name } = target;
+    const value = target.type === 'checkbox' ? target.checked : target.value;
+  
     this.setState({
-      inputName: event.target.value,
-      textArea: event.target.value,
+      [name]: value,
     });
   }
 
@@ -28,24 +33,40 @@ class Form extends React.Component {
           name='inputName'
           type='text' 
           value={this.state.inputName} 
-          onChange={this.metodoFixar} 
+          onChange={this.handleChange} 
           placeholder="input fixar"
         />
         <br></br>
         <br></br>
-        <select>
-          <option>Select Opção 1</option>
-          <option>Opção 2</option>
-          <option>Opção 3</option>
+        <select name='options' value={this.state.options} onChange={this.handleChange}  >
+          <option value="teste">teste</option>
+          <option value="teste2">teste2</option>
+          <option value="teste3">teste3</option>
         </select>
         <br></br>
         <br></br>
         <textarea
           value={this.state.textArea} 
-          onChange={this.metodoFixar} 
+          onChange={this.handleChange} 
+          name='textArea'
         >
-
         </textarea>
+        <br></br>
+        <br></br>
+        <input
+          name='checkbox'
+          type='checkbox' 
+          value={this.state.checkbox} 
+          onChange={this.handleChange} 
+        />
+        <br></br>
+        <br></br>
+        <input
+          name='file'
+          type='file' 
+          value={this.state.file} 
+          onChange={this.handleChange} 
+        />
         
 
       </forms>
