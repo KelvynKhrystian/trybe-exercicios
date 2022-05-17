@@ -12,7 +12,6 @@ class Form extends React.Component {
       textArea: '',
       options: '',
       checkbox: '',
-      file:'',
     }
   }
 
@@ -29,45 +28,52 @@ class Form extends React.Component {
     return(
       <forms>
         <h1>Forms do Fixar </h1>
-        <input
-          name='inputName'
-          type='text' 
-          value={this.state.inputName} 
-          onChange={this.handleChange} 
-          placeholder="input fixar"
-        />
+        <fieldset>
+          <legend>Nome do ser</legend>
+          <input
+            name='inputName'
+            type='text' 
+            value={this.state.inputName} 
+            onChange={this.handleChange} 
+            placeholder="input fixar"
+          />
+        </fieldset>
         <br></br>
         <br></br>
-        <select name='options' value={this.state.options} onChange={this.handleChange}  >
-          <option value="teste">teste</option>
-          <option value="teste2">teste2</option>
-          <option value="teste3">teste3</option>
-        </select>
+        <fieldset>
+          <legend>select e text area</legend>
+          <select name='options' value={this.state.options} onChange={this.handleChange}  >
+            <option value="teste">teste</option>
+            <option value="teste2">teste2</option>
+            <option value="teste3">teste3</option>
+          </select>
+          <br></br>
+          <br></br>
+          <textarea
+            value={this.state.textArea} 
+            onChange={this.handleChange} 
+            name='textArea'
+          >
+          </textarea>
+        </fieldset>
         <br></br>
         <br></br>
-        <textarea
-          value={this.state.textArea} 
-          onChange={this.handleChange} 
-          name='textArea'
-        >
-        </textarea>
+        <fieldset>
+          <legend>checkbox</legend>
+          <input
+            name='checkbox'
+            type='checkbox' 
+            value={this.state.checkbox} 
+            onChange={this.handleChange} 
+          />
+        </fieldset>
         <br></br>
         <br></br>
-        <input
-          name='checkbox'
-          type='checkbox' 
-          value={this.state.checkbox} 
-          onChange={this.handleChange} 
-        />
-        <br></br>
-        <br></br>
-        <input
-          name='file'
-          type='file' 
-          value={this.state.file} 
-          onChange={this.handleChange} 
-        />
-        
+        <fieldset>
+          <legend>file</legend>
+          <input type="file" />
+          {/* file é não pode ser um componente controlado */}
+        </fieldset>
 
       </forms>
     );
