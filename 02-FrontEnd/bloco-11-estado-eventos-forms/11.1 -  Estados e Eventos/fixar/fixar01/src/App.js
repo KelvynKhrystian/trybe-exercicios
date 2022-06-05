@@ -19,21 +19,27 @@ class App extends React.Component {
     console.log('Clicou no botão! 1')
     this.setState((estadoAnterior, _props) => ({
       btn1: estadoAnterior.btn1 + 1,
-    }));
+    }),() => {
+      console.log(`Botão 1 ${this.changeColor(this.state.btn1)}`);
+    });
   };
     
   fixar2() {
-      console.log('Clicou no botão! 2')
-      this.setState ((estadoAnterior, _props) => ({
-        btn2: estadoAnterior.btn2 + 1,
-      }));
+    console.log('Clicou no botão! 2')
+    this.setState ((estadoAnterior, _props) => ({
+      btn2: estadoAnterior.btn2 + 1,
+    }),() => {
+      console.log(`Botão 2 ${this.changeColor(this.state.btn2)}`);
+    });
   };
     
   fixar3() {
-      console.log('Clicou no botão! 3')
-      this.setState((estadoAnterior, _props) => ({
-        btn3: estadoAnterior.btn3 + 1,
-      }))
+    console.log('Clicou no botão! 3')
+    this.setState((estadoAnterior, _props) => ({
+      btn3: estadoAnterior.btn3 + 1,
+    }),() => {
+      console.log(`Botão 3 ${this.changeColor(this.state.btn3)}`);
+    });
   }
 
   changeColor = (numero) => {
