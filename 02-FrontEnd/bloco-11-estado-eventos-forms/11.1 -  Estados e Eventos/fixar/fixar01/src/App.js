@@ -11,6 +11,7 @@ class App extends React.Component {
       btn1: 0,
       btn2: 0,
       btn3: 0,
+      cor: 'red',
     }
   }
 
@@ -35,12 +36,16 @@ class App extends React.Component {
       }))
   }
 
+  changeColor = (numero) => {
+    return numero % 2 === 0 ? 'green' : 'white';
+  }
+
   render() {
     return (
       <>
-        <button onClick={this.fixar}>{this.state.btn1}</button>
-        <button onClick={this.fixar2}>{this.state.btn2}</button>
-        <button onClick={this.fixar3}>{this.state.btn3}</button>
+        <button onClick={this.fixar} style={ { backgroundColor: this.changeColor(this.state.btn1) } }>{this.state.btn1}</button>
+        <button onClick={this.fixar2} style={ { backgroundColor: this.changeColor(this.state.btn2) } }>{this.state.btn2}</button>
+        <button onClick={this.fixar3} style={ { backgroundColor: this.changeColor(this.state.btn3) } }>{this.state.btn3}</button>
       </>
       
     );
