@@ -77,4 +77,13 @@ const books = [
 //   function formatedBookNames() {
 //     // escreva seu código aqui
 //   }
-ok
+
+const expectedResult = books.map((book, index) => {
+  return(
+    `${book.name} - ${book.genre} - ${book.author.name}`
+  )
+ 
+});
+
+console.log(expectedResult);
+// console.log(books[1].id)
