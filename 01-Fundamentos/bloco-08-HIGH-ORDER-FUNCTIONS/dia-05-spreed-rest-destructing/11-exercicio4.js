@@ -34,8 +34,8 @@ const people = [
 // retorna todas as pessoas australianas que nasceram no século 20:
 const filterPeople = (arr) => {
   return (
-    arr.filter((element) => element < 2000)
+    arr.filter((element) => element.bornIn < 2000).filter((nacionality) => nacionality.nationality === 'Australian' )
   )
 }
 
-filterPeople(people)
+console.log(filterPeople(people))
