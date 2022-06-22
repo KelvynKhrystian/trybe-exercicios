@@ -1,4 +1,3 @@
-
 const yearSeasons = {
     spring: ['March', 'April', 'May'],
     summer: ['June', 'July', 'August'],
