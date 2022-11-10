@@ -1,0 +1,6 @@
+aula-docker-compose/
+├── backend
+│   └── Dockerfile
+├── frontend
+│   └── Dockerfile
+└── docker-compose.yaml
