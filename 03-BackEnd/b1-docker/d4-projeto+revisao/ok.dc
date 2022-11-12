@@ -1,0 +1,6 @@
+FROM node:14
+EXPOSE 3001:80
+ADD node_modules.tar.gz dest
+COPY missao_trybe.html /usr/local/apache2/htdocs/
+ENTRYPOINT ["npm", "start"]
+WORKDIR <caminho da pasta>
