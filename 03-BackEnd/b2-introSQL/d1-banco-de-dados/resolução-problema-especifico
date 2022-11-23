@@ -1,3 +1,5 @@
 ele da erro pq já existe algum serviço rodando na porta 3306. provavelmente vc instalou o mySQL localmente. 
 minha dica é: utiliza o comando sudo service mysql stop pra parar o serviço local e depois poe o container pra
  iniciar
+
+ senha: senha-mysql
