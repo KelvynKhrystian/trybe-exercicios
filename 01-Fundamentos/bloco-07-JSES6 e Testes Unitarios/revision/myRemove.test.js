@@ -27,10 +27,3 @@ describe ('🚀 Exercício 1 - A função myRemove()', () => {
     expect([1, 2, 3, 4]).toEqual(myRemove(arrayTest, 5))
   });
 });
-
-describe ('🚀 Exercício 2 - A função myFizzBuzz(num)', () => {
-
-  it ('A função myRemove', () => {
-
-  });
-});
