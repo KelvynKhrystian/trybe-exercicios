@@ -43,4 +43,4 @@ const searchEmployee = (id, detail) => {
   // Implemente seu código aqui
 };
 
-module.exports = { searchEmployee, professionalBoard};
+module.exports = { searchEmployee, professionalBoard };
