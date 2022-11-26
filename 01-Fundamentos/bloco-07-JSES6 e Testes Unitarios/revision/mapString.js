@@ -34,14 +34,6 @@ const decode = (string) => {
   return mapString(map, string);
 }
 
-
-
-const result = encode('aeiou')
-console.log(result);
-
-const result2 = decode('12345')
-console.log(result2);
-
 module.exports = {
   mapString,
   encode,
