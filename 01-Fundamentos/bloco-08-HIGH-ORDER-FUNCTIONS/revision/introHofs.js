@@ -31,3 +31,17 @@ const result3 = musicas.find((id) => id.id === '31031685')
 // console.log(result3);
 
 
+
+
+// fixar some and every
+
+const names2 = ['Mateus', 'José', 'Ana', 'Cláudia', 'Bruna'];
+
+const hasName = (arr, name) => {
+  //Adicione seu código aqui
+  return arr.some((element) => element === name)
+};
+
+console.log(hasName(names2, 'Ana'));
+console.log(hasName(names2, 'Pedro'));
+
