@@ -54,12 +54,11 @@ const searchEmployee = (id, detail) => {
         }
       }
       if (objErro === true) {
-        return "Informação indisponível";
+        throw new Error("Informação indisponível");
       }
-      return professionalBoard[i][detail];
     }
   }
-  return "ID não identificada"
+  throw new Error("ID não identificada");
   
 };
 
