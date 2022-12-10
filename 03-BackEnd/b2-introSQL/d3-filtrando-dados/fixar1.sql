@@ -1,4 +1,11 @@
-SELECT CONCAT(title, ' ', release_year) AS 'Lançamento do Filme' FROM sakila.film;
-SELECT CONCAT(title, ' ', rating) AS 'Classificação' FROM sakila.film;
-SELECT CONCAT(address, ' - ', district) AS 'Endereço' FROM sakila.address;
-
+-- Faça uma query que exiba a palavra 'trybe' em CAIXA ALTA.
+SELECT UCASE('Trybe');
+-- Faça uma query que transforme a frase 'Você já ouviu falar do DuckDuckGo?' 
+-- em 'Você já ouviu falar do Google?'.
+SELECT REPLACE('Você já ouviu falar do DuckDuckGo?','DuckDuckGo', 'Google');
+-- Utilizando uma query, encontre quantos caracteres temos em 'Uma frase qualquer'.
+SELECT CHAR_LENGTH('UMA FRASE QUALQUER');
+-- Extraia e retorne apenas a palavra “JavaScript” da frase 'A linguagem JavaScript está entre as mais usadas'.
+SELECT SUBSTRING('A linguagem JavaScript está entre as mais usadas', 12, 11);
+-- Por fim, padronize a string 'RUA NORTE 1500, SÃO PAULO, BRASIL' para que suas informações estejam todas em caixa baixa.
+SELECT LCASE('RUA NORTE 1500, SÃO PAULO, BRASIL');
