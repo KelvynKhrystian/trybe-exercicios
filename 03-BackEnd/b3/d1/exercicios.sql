@@ -18,7 +18,9 @@ SELECT SUM(salary) FROM hr.employees;
 -- para ter apenas duas casas decimais.
 SELECT ROUND(MAX(salary),2), ROUND(MIN(salary),2), ROUND(SUM(salary),2), ROUND(AVG(salary),2) FROM hr.employees;
 -- 6. Escreva uma query que exiba a quantidade de pessoas que trabalham como pessoas programadoras (it_prog).
-
+SELECT job_id , COUNT(*)
+FROM hr.employees
+WHERE job_id = "it_prog";
 -- 7. Escreva uma query que exiba a quantidade de dinheiro necessária para efetuar o pagamento de cada profissão (job_id).
 
 -- 8. Utilizando a query anterior, faça as alterações para que seja exibido somente a quantidade de dinheiro necessária para cobrir a folha de pagamento das pessoas programadoras (it_prog).
