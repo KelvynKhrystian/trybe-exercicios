@@ -37,3 +37,14 @@ INNER JOIN sakila.address AS a
 ON c.address_id = a.address_id
 WHERE a.district = 'California'AND c.first_name LIKE '%rene%';
 
+-- Exiba o nome, o sobrenome e a quantidade de filmes alugados por cada cliente cadastrado. 
+-- Ordene seus resultados por nome e sobrenome de forma decrescente. 
+-- Exiba somente os clientes ativos. As informações podem ser encontradas nas tabelas customer e rental.
+
+SELECT c.first_name, c.last_name, COUNT(r.rental_id) as 'nº de filmes alugados'
+FROM sakila.customer AS c
+INNER JOIN sakila.rental AS r
+ON c.customer_id = r.customer_id
+WHERE c.active = 1
+GROUP BY c.customer_id
+ORDER BY c.first_name DESC, c.last_name DESC;
