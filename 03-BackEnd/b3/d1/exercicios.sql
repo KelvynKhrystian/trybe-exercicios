@@ -31,7 +31,11 @@ FROM hr.employees
 GROUP BY job_id
 HAVING job_id = 'it_prog';
 -- 9. Escreva uma query que exiba em ordem decrescente a média salarial de todos os cargos, exceto das pessoas programadoras (it_prog).
-
+SELECT job_id , SUM(salary) AS salario
+FROM hr.employees
+GROUP BY job_id
+HAVING job_id <> 'it_prog'
+ORDER BY salario DESC
 -- 10. 🚀 Escreva um query que exiba média salarial e o número de funcionários de todos os departamentos com mais de dez funcionários. Dica: agrupe pelo department_id.
 
 -- 11. 🚀 Escreva uma query que atualize a coluna phone_number, de modo que todos os telefones iniciados por 515 agora devem iniciar com 777.
