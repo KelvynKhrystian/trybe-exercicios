@@ -35,9 +35,12 @@ SELECT job_id , SUM(salary) AS salario
 FROM hr.employees
 GROUP BY job_id
 HAVING job_id <> 'it_prog'
-ORDER BY salario DESC
+ORDER BY salario DESC;
 -- 10. 🚀 Escreva um query que exiba média salarial e o número de funcionários de todos os departamentos com mais de dez funcionários. Dica: agrupe pelo department_id.
-
+SELECT department_id, AVG(salary), COUNT(*) AS contador
+FROM hr.employees
+GROUP BY department_id
+HAVING contador > 10;
 -- 11. 🚀 Escreva uma query que atualize a coluna phone_number, de modo que todos os telefones iniciados por 515 agora devem iniciar com 777.
 
 -- 12. Escreva uma query que só exiba as informações dos funcionários cujo o primeiro nome tenha oito ou mais caracteres.
