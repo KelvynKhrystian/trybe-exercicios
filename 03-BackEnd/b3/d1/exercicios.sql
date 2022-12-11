@@ -62,7 +62,10 @@ WHERE LENGTH(first_name) >= 8;
 -- 13. Escreva uma query que exiba as seguintes informações de cada funcionário: id, primeiro nome e ano no qual foi contratado (exiba somente o ano).
 SELECT employee_id, first_name, YEAR(hire_date) 'hire_year'
 FROM hr.employees;
+
 -- 14. 🚀 Escreva uma query que exiba as seguintes informações de cada funcionário: id, primeiro nome e dia do mês no qual foi contratado (exiba somente o dia).
+SELECT employee_id, first_name, DAY(hire_date) 'hire_day'
+FROM hr.employees;
 
 -- 15. Escreva uma query que exiba as seguintes informações de cada funcionário: id, primeiro nome e mês no qual foi contratado (exiba somente o mês).
 
