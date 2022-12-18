@@ -1,7 +1,6 @@
 const fs = require('fs').promises;
 
-const main = async () => {
-
+const lerArquivo = async () => {
   try {
     const data = await fs.readFile('./simpsons.json', 'utf-8');
     const result = JSON.parse(data)
@@ -16,4 +15,13 @@ const main = async () => {
   }
 }
 
+const main = async () => {
+  await lerArquivo();
+  
+}
+
 main()
+
+
+
+
