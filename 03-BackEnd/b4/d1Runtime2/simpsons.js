@@ -15,8 +15,26 @@ const lerArquivo = async () => {
   }
 }
 
+const searchSimpson = async (id) => {
+
+  const data = await fs.readFile('./simpsons.json', 'utf-8');
+  const simpsonsData = JSON.parse(data);
+  const busca = simpsonsData.find(simpson => {
+    return Number(simpson.id) === id;
+  });
+  
+  if (busca === undefined) throw new Error('id não encontrado');
+  console.log(busca);
+  console.log(" ");
+  // return busca;
+
+}
+
+
 const main = async () => {
-  await lerArquivo();
+
+  // await lerArquivo();
+  await searchSimpson(11);
   
 }
 
