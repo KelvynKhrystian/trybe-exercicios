@@ -62,13 +62,33 @@ const simpsonFamily = async () => {
   }
 }
 
+const addSimpsonFamily = async () => {
+  try {
+    const data = await fs.readFile('./simpsonFamily.json', 'utf-8');
+    const result = JSON.parse(data)
+    const newId = result.length + 1;
+
+    const newList3 = [
+      ...result,
+      {id: newId, name: 'Nelson Muntz'}
+    ]
+
+    await fs.writeFile('./simpsonFamily.json', JSON.stringify(newList3));
+    console.log('Arquivo modificado com sucesso!');
+
+
+  } catch (erro) {
+    console.error(`Erro ao ler/rescrever o arquivo: ${erro.message}`);
+  }
+}
 
 const main = async () => {
 
   // await lerArquivo();
   // await searchSimpson(11);
   // await removeSimpson()
-  await simpsonFamily()
+  // await simpsonFamily()
+  await addSimpsonFamily()
   
 }
 
