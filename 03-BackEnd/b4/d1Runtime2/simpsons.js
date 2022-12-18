@@ -66,7 +66,7 @@ const addSimpsonFamily = async () => {
   try {
     const data = await fs.readFile('./simpsonFamily.json', 'utf-8');
     const result = JSON.parse(data)
-    const newId = result.length + 1;
+    const newId = String(result.length + 1);
 
     const newList3 = [
       ...result,
@@ -82,13 +82,34 @@ const addSimpsonFamily = async () => {
   }
 }
 
+const handleSimpsonAdd = async () => {
+  try {
+    const data = await fs.readFile('./simpsonFamily.json', 'utf-8');
+    const result = JSON.parse(data)
+    // console.log(result);
+
+    result.forEach(el => {
+      if (el.name === 'Nelson Muntz') el.name = 'Maggie Simpson'
+    });
+    // console.log(result);
+
+    // await fs.writeFile('./simpsonFamily.json', JSON.stringify(newList4));
+    console.log('Arquivo modificado com sucesso!');
+
+
+  } catch (erro) {
+    console.error(`Erro ao ler/rescrever o arquivo: ${erro.message}`);
+  }
+}
+
 const main = async () => {
 
   // await lerArquivo();
   // await searchSimpson(11);
   // await removeSimpson()
   // await simpsonFamily()
-  await addSimpsonFamily()
+  // await addSimpsonFamily()
+  await handleSimpsonAdd()
   
 }
 
