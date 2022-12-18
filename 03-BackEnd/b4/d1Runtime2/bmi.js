@@ -1,12 +1,16 @@
-const peso = 93;
-const altura = 168;
+const readline = require("readline-sync");
 
-const bmi = (peso, altura) => {
+const bmi = () => {
 
-  altura = (altura/100);
-  const result = peso / (altura * altura);
+  const peso = readline.questionInt('qual o seu peso ? ')
+  const altC = readline.questionInt('qual a sua altura ? ')
+
+  const altM = (altC/100);
+  const result = peso / (altM * altM);
   const bmi = result.toFixed(2)
-  return bmi; 
+
+  console.log(`O seu BMI é ${bmi}`);
+  // return bmi; 
 }
 
-console.log(bmi(peso, altura));
+bmi();
