@@ -9,3 +9,4 @@
 // A requisição está bem formada mas inabilitada para 
 // ser seguida devido a erros semânticos.
 
+// fonte: https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
