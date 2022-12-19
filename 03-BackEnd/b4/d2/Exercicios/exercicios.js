@@ -10,3 +10,13 @@
 // ser seguida devido a erros semânticos.
 
 // fonte: https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
+
+// Exercício 2
+// Qual é a função do código de status 401?
+
+// 401 Unauthorized
+// Embora o padrão HTTP especifique "unauthorized", semanticamente,
+// essa resposta significa "unauthenticated". Ou seja, o cliente 
+// deve se autenticar para obter a resposta solicitada.
+
+// fonte: https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
