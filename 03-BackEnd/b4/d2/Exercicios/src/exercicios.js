@@ -20,3 +20,6 @@
 // deve se autenticar para obter a resposta solicitada.
 
 // fonte: https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status
+
+// 🚀 Exercício 3
+// Crie um servidor Node.js utilizando o framework Express.
