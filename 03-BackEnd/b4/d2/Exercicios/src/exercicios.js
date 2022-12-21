@@ -23,3 +23,10 @@
 
 // 🚀 Exercício 3
 // Crie um servidor Node.js utilizando o framework Express.
+
+// 🚀 Exercício 4
+// Crie uma função de leitura do JSON com o modulo fs.
+
+// 🚀 Exercício 5
+// Crie um endpoint do tipo GET com a rota ,
+// que possa listar um filme do JSON por id.

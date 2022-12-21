@@ -17,4 +17,17 @@ const movies = async () => {
 
 movies();
 
+app.get('/movies/:id', async (req, res) => {
+  try {
+
+    const read = await movies();
+    const movie = read.find(({ id }) => id === Number(req.params.id));
+    res.status(200).json(movie);
+
+  } catch (erro) {
+
+    res.status(500).send({ mensagem: erro.message });
+  }
+});
+
 module.exports = app;
