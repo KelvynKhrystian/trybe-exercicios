@@ -45,7 +45,13 @@ const mockFile = JSON.stringify({
         brandId: 3,
       },
     ],
-  });
+});
+
+const total = JSON.stringify(
+  {
+    "totalChocolates": 4 // quantidade de chocolates na base de dados
+  }
+);
 
 const app = require('../../src/app');
 
@@ -103,52 +109,61 @@ describe('Testando a API Cacau Trybe', function () {
 
     describe('Usando o método GET em /chocolates/brand/:brandId para buscar brandId 1', function () {
         it('Retorna os chocolates da marca Lindt & Sprungli', async function () {
-        const response = await chai
-            .request(app)
-            .get('/chocolates/brand/1');
+          const response = await chai
+              .request(app)
+              .get('/chocolates/brand/1');
 
-        expect(response.status).to.be.equal(200);
-        expect(response.body.chocolates).to.deep.equal([
-            {
-            id: 1,
-            name: 'Mint Intense',
-            brandId: 1,
-            },
-            {
-            id: 2,
-            name: 'White Coconut',
-            brandId: 1,
-            },
-        ]);
+          expect(response.status).to.be.equal(200);
+          expect(response.body.chocolates).to.deep.equal([
+              {
+              id: 1,
+              name: 'Mint Intense',
+              brandId: 1,
+              },
+              {
+              id: 2,
+              name: 'White Coconut',
+              brandId: 1,
+              },
+          ]);
         });
     });
 });
 
 describe('exercicios-testes', function () {
-  beforeEach(function () {
-    sinon.stub(fs.promises, 'readFile')
-    .resolves(mockFile);
-  });
+  // beforeEach(function () {
+  //   sinon.stub(fs.promises, 'readFile')
+  //   .resolves(total);
+  // });
 
-  afterEach(function () {
-      sinon.restore();
-  });
+  // afterEach(function () {
+  //     sinon.restore();
+  // });
 
-  it('Ex.1 - Crie um caso para o código retornado ', async function() {
-    const output =
-    {
-      "totalChocolates": 4 // quantidade de chocolates na base de dados
-    }
+  // it('Ex.1 - Crie um caso para o código retornado ', async function() {
+  //   const output =
+  //   {
+  //     totalChocolates: 4 // quantidade de chocolates na base de dados
+  //   }
 
-    const response = await chai
-    .request(app)
-    .get('/chocolates/total');
+  //   const response = await chai
+  //   .request(app)
+  //   .get('/chocolates/total');
 
-    expect(response.status).to.be.equal(200);
-    expect(response.body.chocolates).to.deep.equal(output);
-  });
+  //   expect(response.status).to.be.equal(200);
+  //   expect(response.body).to.deep.equal(output);
+  // });
 
-  it('Ex.2 - Crie outro caso para o retorno esperado ', async function() {
+  // it('Ex.2 - Crie outro caso para o retorno esperado ', async function() {
     
+  // });
+  describe('Usando o método GET em /chocolates/total', function () {
+    it('Retorna a quantidade total de chocolates', async function () {
+      const response = await chai.request(app)
+        .get('/chocolates/total');
+
+      expect(response.status).to.be.equal(200);
+      expect(response.body).to.deep.equal({ totalChocolates: 4 });
+    });
   });
 })
