@@ -124,3 +124,31 @@ describe('Testando a API Cacau Trybe', function () {
     });
 });
 
+describe('exercicios-testes', function () {
+  beforeEach(function () {
+    sinon.stub(fs.promises, 'readFile')
+    .resolves(mockFile);
+  });
+
+  afterEach(function () {
+      sinon.restore();
+  });
+
+  it('Ex.1 - Crie um caso para o código retornado ', async function() {
+    const output =
+    {
+      "totalChocolates": 4 // quantidade de chocolates na base de dados
+    }
+
+    const response = await chai
+    .request(app)
+    .get('/chocolates/total');
+
+    expect(response.status).to.be.equal(200);
+    expect(response.body.chocolates).to.deep.equal(output);
+  });
+
+  it('Ex.2 - Crie outro caso para o retorno esperado ', async function() {
+    
+  });
+})
