@@ -6,6 +6,11 @@ const UserModel = (sequelize, DataTypes) => {
     email: DataTypes.STRING,
   });
 
+  (async () => {
+    await sequelize.sync({ force: true });
+    // As funções vão aqui
+})();
+
   return User;
 };
 
