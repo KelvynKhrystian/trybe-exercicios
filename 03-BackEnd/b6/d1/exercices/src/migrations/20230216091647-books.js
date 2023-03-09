@@ -2,17 +2,35 @@
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    return await queryInterface.createTable('Books', {
+    return await queryInterface.createTable('books', {
 
-      id: Sequelize.INTEGER,
-
+      id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true
+      },
+      title: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      author: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
+      pageQuantity: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+      },
+      createdAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      },
+      updatedAt: {
+        allowNull: false,
+        type: Sequelize.DATE
+      }
     });
-    /**
-     * Add altering commands here.
-     *
-     * Example:
-     * await queryInterface.createTable('users', { id: Sequelize.INTEGER });
-     */
   },
 
   down: async (queryInterface, Sequelize) => {
