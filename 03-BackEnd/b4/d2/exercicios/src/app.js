@@ -3,7 +3,7 @@ const fs = require('fs').promises;
 const path = require('path');
 
 const app = express();
-// app.express(json());
+app.use(express.json());
 
 const moviesPath = path.resolve(__dirname, './movies.json');
 
@@ -43,6 +43,31 @@ app.get('/movies/:id', async (req,res) => {
     
 });
 
+app.post('/movies', async (req,res) => {
+
+  try {
+
+    const oldMovies = await moviesAll();
+
+    const {movie, price} = req.body
+    const newMovie = {
+      id: oldMovies[oldMovies.length - 1].id + 1,
+      movie,
+      price,
+    }
+
+    console.log(newMovie);
+    
+    const movies =  JSON.stringify([...oldMovies, newMovie])
+    await fs.writeFile('./movies.json', movies);
+
+    return res.status(201).json(movies)
+
+  } catch (err) {
+    res.status(500).send({ message: err.message });
+  }
+    
+});
 
 
 
