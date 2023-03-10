@@ -17,6 +17,18 @@ const moviesAll = async () => {
     }
 }
 
+app.get('/movies', async (req,res) => {
+
+  try {
+    const movies = await moviesAll()
+    return res.status(200).json(movies)
+
+  } catch (err) {
+    res.status(500).send({ message: err.message });
+  }
+    
+});
+
 app.get('/movies/:id', async (req,res) => {
 
   try {
