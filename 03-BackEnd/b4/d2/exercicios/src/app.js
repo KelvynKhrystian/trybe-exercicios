@@ -22,7 +22,7 @@ app.get('/movies/:id', async (req,res) => {
   try {
     const { id } = req.params
     const movies = await moviesAll()
-    const moviesId = movies.filter((filme) => filme.id = Number(id))
+    const moviesId = movies.filter((filme) => filme.id === Number(id))
     return res.status(200).json(moviesId)
 
   } catch (err) {
