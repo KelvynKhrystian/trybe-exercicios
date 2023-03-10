@@ -69,6 +69,27 @@ app.post('/movies', async (req,res) => {
     
 });
 
+app.put('/movies/:id', async (req,res) => {
+
+  try {
+    const { id } = req.params
+    const {movie, price} = req.body
+    const movies = await moviesAll()
+    movies.forEach((filme) => {
+      if (filme.id === Number(id)) {
+        filme.movie = movie;
+        filme.price = price
+        return res.status(200).json(movies)
+      }
+    })
+    
+
+  } catch (err) {
+    res.status(500).send({ message: err.message });
+  }
+    
+});
+
 
 
 module.exports = app;
