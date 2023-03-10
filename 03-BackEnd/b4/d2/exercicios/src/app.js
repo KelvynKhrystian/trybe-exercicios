@@ -98,7 +98,7 @@ app.delete('/movies/:id', async (req,res) => {
     const movieDelete = movies.filter((filme) => filme.id !== Number(id))
     const updatedMovies = JSON.stringify(movieDelete);
     await fs.writeFile('./movies.json', updatedMovies);
-    return res.status(200).json(updatedMovies)
+    return res.status(204).end();
     
 
   } catch (err) {
