@@ -1,6 +1,8 @@
-const weight = 95;
-const height = 1.7;
+const readline = require('readline-sync')
 
-const imc = weight / ( height * height)
+const weight = readline.questionInt('Qual o seu peso ? ')
+const height = readline.questionInt('Qual a sua altura ? ')
+
+const imc = weight / ( height * 2)
 
 console.log(imc);
