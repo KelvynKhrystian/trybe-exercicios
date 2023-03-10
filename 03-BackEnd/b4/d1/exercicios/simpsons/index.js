@@ -1,5 +1,8 @@
 const fs = require('fs').promises;
 const readline = require('readline-sync')
+const path = require('path')
+
+const diretorio = './simpsons.json'
 
 const simpsonsAll = async () => {
   try {
@@ -27,10 +30,26 @@ const simpsonsId = async () => {
   }
 }
 
+const simpsonsFilter = async () => {
+  try {
+    const data = await fs.readFile(path.resolve(__dirname, diretorio));
+    const result = JSON.parse(data)
+    const personFiltered = await result.filter((p) => Number(p.id) !== 6 && Number(p.id) !== 10)
+    console.log(result);
+    await fs.writeFile(path.resolve(__dirname, diretorio), JSON.stringify(personFiltered));
+    console.log('Arquivo escrito com sucesso!');
+    console.log(personFiltered);
+
+  } catch (err) {
+    return `Erro ao editar: ${err.message}`;
+  }
+}
+
 const main = () => {
 
   // simpsonsAll()
-  simpsonsId()
+  // simpsonsId();
+  simpsonsFilter();
 }
 
 
