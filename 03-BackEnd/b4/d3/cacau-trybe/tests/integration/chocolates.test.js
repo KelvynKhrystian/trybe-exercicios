@@ -51,6 +51,7 @@ const mockFile = JSON.stringify({
 });
 
 describe('Testando a API Cacau Trybe', function () {
+  
   beforeEach(function () {
     sinon.stub(fs.promises, 'readFile')
       .resolves(mockFile);
@@ -124,5 +125,17 @@ describe('Testando a API Cacau Trybe', function () {
     });
   });
 
-  
+  describe('Usando o método GET em /chocolates/total', function () {
+    it('Retorna a quantidade de chocolates', async function () {
+      
+      const response = await chai.request(app).get('/chocolates/total');
+      expect(response.status).to.be.equal(200);
+      expect(response.body).to.deep.equal({
+        "totalChocolates": 4 // quantidade de chocolates na base de dados
+      });
+
+    });
+  });
+
+
 });

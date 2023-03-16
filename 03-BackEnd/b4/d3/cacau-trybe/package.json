@@ -2,9 +2,10 @@
   "name": "cacau-trybe",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "mocha tests/**/*.test.js --exit"
+    "test": "mocha tests/**/*.test.js --exit",
+    "start": "node src/server.js"
   },
   "keywords": [],
   "author": "",
