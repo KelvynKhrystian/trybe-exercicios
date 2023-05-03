@@ -11,3 +11,26 @@ const isItAPrime = (param: number) => {
 isItAPrime(numberInput)
   ? console.log(`${numberInput} é primo`)
   : console.log(`${numberInput} não é primo`);
+
+
+// Essa função é responsável por validar se o formato do e-mail está correto.
+
+const emailInput = 'email@email.com';
+
+const validateEmailFormat = (param: string) => {
+  var re = /\S+@\S+\.\S+/;
+  return re.test(param);
+};
+
+console.log(validateEmailFormat(emailInput))
+
+
+// Essa função recebe uma lista e ordena seu conteúdo de forma crescente.
+
+const numberList = [10, 5, 18, 2, 8, 23];
+
+const sortInput = (param: number[]) => {
+  return param.sort(function(a, b){return a-b});
+};
+
+console.log(sortInput(numberList));
